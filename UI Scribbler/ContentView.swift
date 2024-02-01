@@ -34,38 +34,14 @@ struct ContentView: View {
             // Container VStack
             VStack (){
                 
-                //                Rectangle()
-                //                    .fill(Color.clear)
-                //                    .contentShape(Rectangle())
-                //                    .gesture(
-                //                        DragGesture(minimumDistance: 0)
-                //                            .onChanged { value in
-                //                                // Handle drag gestures here
-                //                                let location = value.location
-                //                                currentPath.addLine(to: location)
-                //                                print("drag Queen")
-                //                            }
-                //                            .onEnded { _ in
-                //                                // Handle end of drag gesture
-                //                                drawing.append(currentPath)
-                //                                currentPath = Path() // Reset the current path
-                //                                print("drag Queen done dragging")
-                //                            }
-                //                    )
-                //                    .frame(width: canvasWidth, height: canvasHeight)
-                //                    .background(
-                //                        RoundedRectangle(cornerRadius: 40)
-                //                            .fill(Color("surface"))
-                //                    )
-                //                    .overlay(
-                //                        ForEach(0..<drawing.count, id: \.self) { index in
-                //                            drawing[index].stroke(Color.black, lineWidth: 3)
-                //                        }
-                //                    )
-                
                 DrawingViewRepresentable(drawingView: $drawingView)
-                    .border(Color.black, width: 1) // Optional: Adds a border around the drawing area
-                    .padding()
+                    .frame(width: canvasWidth, height: canvasHeight)
+                    .clipShape(RoundedRectangle(cornerRadius: 40, style: .continuous))
+                    .background(
+                        RoundedRectangle(cornerRadius: 40, style: .continuous)
+                            .fill(Color("surface"))
+                    )
+                
                 
                 Spacer()
                 // BUTTONS
