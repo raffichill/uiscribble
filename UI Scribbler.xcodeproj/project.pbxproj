@@ -52,9 +52,9 @@
 			isa = PBXGroup;
 			children = (
 				967F2AD02B64E8E7009D0E45 /* UI_ScribblerApp.swift */,
+				96DD73832B6B67CE0043310B /* ContentView.swift */,
 				967F2AD42B64E8E9009D0E45 /* Assets.xcassets */,
 				967F2AD62B64E8EA009D0E45 /* Preview Content */,
-				96DD73832B6B67CE0043310B /* ContentView.swift */,
 			);
 			path = "UI Scribbler";
 			sourceTree = "<group>";
