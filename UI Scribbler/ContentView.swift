@@ -78,9 +78,9 @@ struct ContentView: View {
 struct CustomButtonStyle: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .font(.system(size: 20).weight(.semibold))
+            .font(.system(size: 19).weight(.semibold))
             .foregroundStyle(Color.white)
-            .frame(width: 70, height: 54)
+            .frame(width: 80, height: 56)
             .background(
                 RoundedRectangle(cornerRadius: 27, style: .continuous) // Use .continuous for continuous corner smoothing
                     .fill(Color.white.opacity(0.07))
