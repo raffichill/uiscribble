@@ -35,7 +35,10 @@ class DrawingView: UIView {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         currentPath = UIBezierPath()
-        currentPath?.lineWidth = 2
+        currentPath?.lineWidth = 2.5
+        currentPath?.lineCapStyle = .round // Makes the end of the line rounded
+        currentPath?.lineJoinStyle = .round // Makes the junction between line segments rounded
+        
         if let touch = touches.first {
             currentPath?.move(to: touch.location(in: self))
         }
